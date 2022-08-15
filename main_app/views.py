@@ -10,6 +10,9 @@ from django.contrib.auth.forms import UserCreationForm
 class TripCreate(CreateView):
   model = Trip
   fields = ['name', 'city', 'county', 'stayLength', 'date', 'description']
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
   def form_valid(self, form):
     form.instance.user = self.request.user
