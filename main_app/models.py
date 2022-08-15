@@ -10,6 +10,7 @@ class Trip(models.Model):
     county = models.CharField(max_length=50)
     stayLength = models.IntegerField()
     date = models.DateField()
+    description = models.CharField(max_length=500)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
