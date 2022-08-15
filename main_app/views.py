@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.generic.edit import CreateView
 from .models import Trip
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -6,6 +7,17 @@ from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here
 # Define the home view
+class TripCreate(CreateView):
+  model = Trip
+  fields = ['name', 'city', 'county', 'stayLength', 'date', 'description']
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
+
 def home(request):
     return render(request, 'home.html')
 
@@ -19,6 +31,7 @@ def trips_index(request):
 def trips_detail(request, trip_id):
   trip = Trip.objects.get(id=trip_id)
   return render(request, 'trips/detail.html', { 'trip': trip })
+
 
 
 def signup(request):
