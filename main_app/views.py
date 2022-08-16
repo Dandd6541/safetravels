@@ -14,14 +14,14 @@ import requests
 # Define the home view
 class TripCreate(LoginRequiredMixin, CreateView):
   model = Trip
-  fields = ['name', 'city', 'county', 'stayLength', 'date', 'description']
+  fields = ['name', 'city', 'cityFrom','county', 'stayLength', 'date', 'description']
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
 class TripUpdate(LoginRequiredMixin, UpdateView):
   model = Trip
-  fields = ['name', 'city', 'county', 'stayLength', 'date', 'description']
+  fields = ['name', 'city', 'cityFrom', 'county', 'stayLength', 'date', 'description']
 
 class TripDelete(LoginRequiredMixin, DeleteView):
   model = Trip

@@ -7,6 +7,7 @@ from django.urls import reverse
 class Trip(models.Model):
     name = models.CharField(max_length=100)
     city = models.CharField(max_length=50)
+    cityFrom = models.CharField(max_length=50)
     county = models.CharField(max_length=50)
     stayLength = models.IntegerField()
     date = models.DateField()
