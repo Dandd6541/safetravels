@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>List of People</h1>
+
+{% for people in people_list %}
+    <div class="card">
+        <div class="card-content">
+           <a href="{% url 'peoples_detail' people.id %}"><span class="card-title">{{ people.name }}</span></a>
+            <p>Relation: {{ people.relation }}</p>
+        </div>
+    </div>
+
+{% endfor %}
+{% endblock %}
