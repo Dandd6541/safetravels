@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 # Import the mixin for class-based views
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Add the following import
+import requests
 
 # Create your views here
 # Define the home view
@@ -31,6 +32,12 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def covid(request):
+    state = 'california'
+    covidcases = requests.get(f'https://disease.sh/v3/covid-19/historical/usacounties/{state}?lastdays=7')
+    covidcases = covidcases.json()
+    return render(request, 'covid.html')
 
 @login_required
 def trips_index(request):
