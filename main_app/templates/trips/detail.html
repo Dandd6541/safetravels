@@ -24,7 +24,7 @@
   <hr>
 <div class="row">
   <div class="col s6">
-    <h3>{{ trip.name }}'s peoples</h3>
+    <h3>Travel Buddies</h3>
     {% if trip.peoples.count %}
       {% for people in trip.peoples.all %}
       <div class="card">
@@ -68,7 +68,7 @@
     </div>
     {% endfor %}
     {% else %}
-    <h5>{{people.name}} Already Has All Toys Available</h5>
+    <h5>No one to add.</h5>
     {% endif %}
   </div>
 </div>
