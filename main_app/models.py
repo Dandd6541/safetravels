@@ -4,18 +4,18 @@ from datetime import date
 from django.urls import reverse
 
 RELATION = (
-    ('F', 'Family'),
-    ('FR', 'Friends'),
-    ('S', 'Spouse'),
-    ('SO', 'Significant Other'),
-    ('O', 'Other'),
+    ('Family', 'Family'),
+    ('Friend', 'Friend'),
+    ('Spouse', 'Spouse'),
+    ('Significant Other', 'Significant Other'),
+    ('Other', 'Other'),
 )
 # Create your models here.
 
 class People(models.Model):
   name = models.CharField(max_length=50)
   relation = models.CharField(
-    max_length=2,
+    max_length=25,
     choices=RELATION,
     default=RELATION[0][1] 
   )

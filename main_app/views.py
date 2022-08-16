@@ -60,7 +60,13 @@ def trips_index(request):
 @login_required  
 def trips_detail(request, trip_id):
   trip = Trip.objects.get(id=trip_id)
-  return render(request, 'trips/detail.html', { 'trip': trip })
+  id_list = trip.peoples.all().values_list('id')
+  peoples_trip_doesnt_have = People.objects.exclude(id__in=id_list)
+  return render(request, 'trips/detail.html', {
+     'trip': trip ,
+     'peoples': peoples_trip_doesnt_have
+     }
+    )
 
 class PeopleList(ListView, LoginRequiredMixin):
   model = People
