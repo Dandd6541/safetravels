@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Trip
+from django.views.generic import ListView, DetailView 
+from .models import Trip, People 
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 # Imports login_required decorator
@@ -27,6 +28,18 @@ class TripDelete(LoginRequiredMixin, DeleteView):
   model = Trip
   success_url = '/trips/'
 
+
+@login_required
+def assoc_people(request, trip_id, people_id):
+  trip = Trip.objects.get(id=trip_id)
+  trip.peoples.add(people_id)
+  return redirect('detail', trip_id=trip_id)
+
+@login_required
+def unassoc_people(request, trip_id, people_id):
+  Trip.objects.get(id=trip_id).peoples.remove(people_id)
+  return redirect('detail', trip_id=trip_id)
+
 def home(request):
     return render(request, 'home.html')
 
@@ -49,6 +62,24 @@ def trips_detail(request, trip_id):
   trip = Trip.objects.get(id=trip_id)
   return render(request, 'trips/detail.html', { 'trip': trip })
 
+class PeopleList(ListView, LoginRequiredMixin):
+  model = People
+
+
+class PeopleDetail(DetailView, LoginRequiredMixin):
+  model = People
+
+class PeopleCreate(CreateView, LoginRequiredMixin):
+  model = People
+  fields = '__all__'
+
+class PeopleUpdate(UpdateView, LoginRequiredMixin):
+  model = People
+  fields = ['name', 'relation']
+
+class PeopleDelete(DeleteView, LoginRequiredMixin):
+  model = People
+  success_url = '/peoples/'
 
 
 def signup(request):
@@ -69,3 +100,6 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+
+

@@ -20,6 +20,8 @@
         <ul class="right">
             <li><a href="/about">About</a></li>
                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'peoples_index' %}">View All People</a></li>
+                    <li><a href="{% url 'peoples_create' %}">Add Person</a></li>
                     <li><a href="{% url 'covid' %}">COVID-19 Data</a></li>
                     <li><a href="{% url 'trips_create' %}">Add a Trip</a></li>
                     <li><a href="{% url 'index' %}">My Trips</a></li>
