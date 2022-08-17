@@ -50,12 +50,24 @@ def covid(request):
     return render(request, 'covid.html')
 
 def covid_query(request):
-    print(request.POST.get('state'))
-    state = request.POST.get('state')
+    state = request.GET.get('state')
+    print(state)
     c = requests.get(f'https://disease.sh/v3/covid-19/historical/usacounties/{state}?lastdays=7')
     c = c.json()
-    print(c)
-    return render(request, 'covidquery.html', {'c': c})
+    for county in c:
+      total_cases = 0
+      count_cases = 0
+      total_deaths = 0
+      count_deaths = 0
+      for date, num_cases in county['timeline']['cases'].items():
+        total_cases += num_cases
+        count_cases += 1
+      county['avg_cases'] = total_cases // count_cases
+      for date, num_cases in county['timeline']['deaths'].items():
+        total_deaths += num_cases
+        count_deaths += 1
+      county['avg_deaths'] = total_deaths // count_deaths
+    return render(request, 'covidquery.html', {'c': c })
 
 @login_required
 def trips_index(request):

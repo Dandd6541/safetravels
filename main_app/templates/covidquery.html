@@ -1,27 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1> COVID Query Data </h1>
-
-<table>
-<thead>
-    <tr>
-
-        <th>Province</th>
-        <th>County</th>
-        <th>Timeline</th>
-        <th>Cases</th>
-    </tr>
-</thead>
-
-<tbody>
-{% for c in covid %}
-    <td>{{ c[0].covid }}</td>
-    <td></td>
-
+<h1> COVID Query </h1>
+{% for county in c %}
+<div>County: {{ county.county }}</div>
+<div>Last 7-Day Average Cases: {{ county.avg_cases }}</div>
+<div>Last 7-Day Average Deaths {{ county.avg_deaths }}</div>
 {% endfor %}
-
-</tbody>
-</table>
-
 {% endblock %}

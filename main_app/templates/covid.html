@@ -3,7 +3,7 @@
 <h1> You are now viewing the most up to date COVID-19 Data</h1>
 <hr>
 
-<form action="{% url 'covid_query' %}" method="POST">
+<form action="{% url 'covid_query' %}" method="GET">
   {% csrf_token %}
 <select name="state" id="state">
     <option value="" selected="selected">Select a State</option>
