@@ -55,7 +55,7 @@ def covid_query(request):
     c = requests.get(f'https://disease.sh/v3/covid-19/historical/usacounties/{state}?lastdays=7')
     c = c.json()
     print(c)
-    return render(request, 'covidquery.html')
+    return render(request, 'covidquery.html', {'c': c})
 
 @login_required
 def trips_index(request):

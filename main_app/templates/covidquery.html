@@ -3,6 +3,25 @@
 
 <h1> COVID Query Data </h1>
 
+<table>
+<thead>
+    <tr>
 
+        <th>Province</th>
+        <th>County</th>
+        <th>Timeline</th>
+        <th>Cases</th>
+    </tr>
+</thead>
+
+<tbody>
+{% for c in covid %}
+    <td>{{ c[0].covid }}</td>
+    <td></td>
+
+{% endfor %}
+
+</tbody>
+</table>
 
 {% endblock %}
