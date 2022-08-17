@@ -47,10 +47,15 @@ def about(request):
     return render(request, 'about.html')
 
 def covid(request):
-    state = 'california'
-    covidcases = requests.get(f'https://disease.sh/v3/covid-19/historical/usacounties/{state}?lastdays=7')
-    covidcases = covidcases.json()
     return render(request, 'covid.html')
+
+def covid_query(request):
+    print(request.POST.get('state'))
+    state = request.POST.get('state')
+    c = requests.get(f'https://disease.sh/v3/covid-19/historical/usacounties/{state}?lastdays=7')
+    c = c.json()
+    print(c)
+    return render(request, 'covidquery.html')
 
 @login_required
 def trips_index(request):
