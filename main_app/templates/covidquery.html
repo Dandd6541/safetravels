@@ -17,7 +17,7 @@
  
 {% for county in c %}
 <tr>
-<td class="text-center">{{ county.county }}</div>
+<td class="text-center">{{ county.county | title }}</div>
 <td class="text-center">{{ county.avg_cases }}</div>
 <td class="text-center">{{ county.avg_deaths }}</div>
 </tr>

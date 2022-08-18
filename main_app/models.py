@@ -19,6 +19,7 @@ class People(models.Model):
     choices=RELATION,
     default=RELATION[0][1] 
   )
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
     return self.name
