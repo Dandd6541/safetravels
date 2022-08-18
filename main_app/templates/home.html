@@ -2,28 +2,72 @@
 {% block content %}
 
 
-<h1>SafeTravels </h1>
-
-<div class="jumbotron jumbotron-fluid blue">
+<br>
+<div class="jumbotron jumbotron-fluid purple">
   <div class="container">
     <div class="row vertical-align-middle mt-5 mb-5">
       <div class="col-md-6">
         <h1 class="text-inverse">SafeTravels is a web app designed to assist travelers across the US navigate the
-          COVID-19 pandemic. </h1>
+          COVID-19 pandemic.</h1>
       </div>
     </div>
   </div>
 </div>
 
+
 <div style="border-bottom: 1px solid #dfe3e8;">
 </div>
 
+<div class="card-deck">
 <div class="container full-page mt-5" id="resources">
   <div class="text-center mb-5">
-    <h2>Resources<h2>
+    <h2 class="text-center">Resources<h2>
   </div>
-  <div class="row d-flex justify-content-between">
-    <div class="col-md-4 mb-4">
-      <div class="card text-center">
+
+  <div class="row row-cols-1 row-cols-md-2">
+    <div class="col mb-4">
+      <div class="card" style="width: 20rem;">
+    <img src="https://media.istockphoto.com/vectors/passenger-plane-takes-off-from-runway-vector-id913619272?b=1&k=20&m=913619272&s=170667a&w=0&h=8XUWRHK1CJ4b0FrKQ2n2Yb_XPa1KZVjTIskSQL2PH4E=" class="card-img-top" alt="flight">
+    <div class="card-body">
+      <h5 class="card-title">Have an upcoming trip?</h5>
+      <p class="card-text">Add your upcoming trip or destinations with family members!</p>
+      <a href="trips/create/" class="btn btn-primary">Go Somewhere!</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="col mb-4">
+  <div class="card" style="width: 20rem;">
+    <img src="https://innovativegenomics.org/wp-content/uploads/2020/04/red-two-tone.png" class="card-img-top" alt="flight">
+    <div class="card-body">
+      <h5 class="card-title">Updated COVID-19 Data</h5>
+      <p class="card-text">Although airlines and many places of travel have lifted restrictions, check out the most up to date information based on where you are traveling!</p>
+      <a href="covid/" class="btn btn-primary">Check out State & County data</a>
+    </div>
+  </div>
+  </div>
+
+  <div class="col mb-4">
+  <div class="card" style="width: 20rem;">
+    <img src="https://blog.psecu.com/hubfs/Blog/financial-tips-for-every-stage-in-life/Images/2021/05/Best-Places-to-Raise-a-Family-in-Pennsylvania.png" class="card-img-top" alt="flight">
+    <div class="card-body">
+      <h5 class="card-title">Adding members to your itinerary?</h5>
+      <p class="card-text">Add, Edit, and Delete friends, family and even pets to your trip</p>
+      <a href="trips/create/" class="btn btn-primary">Add members to your trip</a>
+    </div>
+    </div>
+  </div>
+
+<div class="col mb-4">
+  <div class="card" style="width: 20rem;">
+    <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2022/01/about-us-page-examples-1-61fd8f9784626-sej.jpg" class="card-img-top" alt="flight">
+    <div class="card-body">
+      <h5 class="card-title">About the Developers</h5>
+      <p class="card-text">Meet Team 404, the developers behind SafeTravels!</p>
+      <a href="about/" class="btn btn-primary">Who We Are </a>
       </div>
-      {% endblock %}
+    </div>
+  </div>
+</div>
+
+ {% endblock %}

@@ -18,19 +18,33 @@
       <div class="container">
         <ul class="nav justify-content-center">
           <a class="navbar-brand" href="/">SafeTravels</a>
-          <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'peoples_index' %}">View All People</a></li>
-                    <li><a href="{% url 'peoples_create' %}">Add Person</a></li>
-                    <li><a href="{% url 'covid' %}">COVID-19 Data</a></li>
-                    <li><a href="{% url 'trips_create' %}">Add a Trip</a></li>
-                    <li><a href="{% url 'index' %}">My Trips</a></li>
-                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    People
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'peoples_index' %}">View All People</a></button></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'peoples_create' %}">Add Person</a></button></li>
+                  </ul>
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trips
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">My Trips</a></button></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'trips_create' %}">Add a Trip</a></button></li>
+                  </ul>
+                </div>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'covid' %}">COVID-19 Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}
-                    <li><a href="{% url 'covid' %}">COVID-19 Data</a></li>
-                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'covid' %}">COVID-19 Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Log In</a></li>
                 {% endif %}
         </ul>
       </div>
@@ -39,30 +53,7 @@
   <main class="container">
     {% block content %}
     {% endblock %}
-  </main>
-  <body class="d-flex flex-column h-100">
-  <footer class="bg-dark text-center text-white">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-          <!--Grid row-->
-          <div class="row d-flex justify-content-center">
-            </div>
-            <!--Grid column-->
-          </div>
-          <!--Grid row-->
-        </form>
-      </section>
-      <!-- Section: Form -->
-    </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2022 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">SafeTravels</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
+  </main>  
     
   </div>
   </body>
