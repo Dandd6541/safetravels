@@ -1,14 +1,26 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Sign Up</h1>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+  <div class="col-md-5">
+   <div class="card">
+     <h2 class="card-title text-center">Register for SafeTravels</h2>
 
 <p class="red-text">{{ error_message }}</p>
 
 <form method="POST" action="{% url 'signup' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" class="btn" value="Sign Up">
+    
+    <div class="d-flex justify-content-center">
+    <button class="btn btn-primary">Create Account</button>
+  </div>
   </form>
-  
+</div>
+</div>
+</div>
+</div>
+</div>
   {% endblock %}
