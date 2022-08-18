@@ -9,74 +9,31 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  font-family: Hack, monospace;
-}
-
-
-.card-img-top {
-  height:340px;
-  width:auto;
-}
-
-h1, h2, h3, h4, h5, h6, p, .a, .navbar-brand, .btn {
-  font-family: 'Source Sans Pro', sans-serif;
-}
-
-h1 {
-  font-weight: 400 !important;
-}
-
-h2 {
-  font-weight: 600 !important;
-}
-
-p {
-  font-size: 18px !important;
-  font-weight: 400 !important;
-  color: #637381 !important;
-}
-
-.purple {
-  background: linear-gradient(26deg,#5137AD, #6C4DCC 75%);
-}
-
-.text-inverse {
-  color: #fff !important;
-}
-
-.full-page {
-  min-height: calc(100vh - 40px);
-}
-
-.jumbotron {
-  margin-top: 40px;
-}
-
-#team {
-  position: relative;
-}
-
-.right {
-  float: right;
-}
-
-.left {
-  display: block;
-  overflow: hidden;
-}
-
-#about {
-  background: #e9ecef;
-  border-radius: #5137AD;
-}
-
-.imgAbout {
-  margin-top: 2vh;
-  margin-left: 20vh;
-  max-width: 30%;
-  height: auto;
+  font-family: monospace;
 }
 
 nav {
   width: 100%
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
+.form-control{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+
+.form-control:focus {
+
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid #da5767;
+    outline: 0;
+    box-shadow: none;
+
 }
