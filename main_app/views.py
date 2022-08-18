@@ -76,12 +76,13 @@ def trips_index(request):
 
 @login_required  
 def trips_detail(request, trip_id):
+  user_id = request.user.id
   trip = Trip.objects.get(id=trip_id)
-  id_list = trip.peoples.all().values_list('id')
-  peoples_trip_doesnt_have = People.objects.exclude(id__in=id_list)
+  id_list = trip.peoples.all().values_list('id').filter(user_id=user_id)
+  peoples_trip_doesnt_have = People.objects.exclude(id__in=id_list).filter(user_id=user_id)
   return render(request, 'trips/detail.html', {
      'trip': trip ,
-     'peoples': peoples_trip_doesnt_have
+     'peoples': peoples_trip_doesnt_have,
      }
     )
 
@@ -94,7 +95,10 @@ class PeopleDetail(DetailView, LoginRequiredMixin):
 
 class PeopleCreate(CreateView, LoginRequiredMixin):
   model = People
-  fields = '__all__'
+  fields = ['name', 'relation']
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class PeopleUpdate(UpdateView, LoginRequiredMixin):
   model = People

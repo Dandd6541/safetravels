@@ -10,20 +10,27 @@
   <form action="" method="POST">
     <!-- Django requires the following for security purposes -->
     {% csrf_token %}
-    <table>
-      <!-- Render the inputs inside of <tr>s & <td>s -->
-      {{ form.as_table }}
-    </table>
+    <label for="name">Name of the trip: </label>
+    <input id="name" type="text" name="name">
+    <br>
+    <label for="city">What city are you going to?: </label>
+    <input id="city" type="text" name="city">
+    <br>
+    <label for="cityFrom">What city are you coming from?: </label>
+    <input id="cityFrom" type="text" name="cityFrom">
+    <br>
+    <label for="county">What county are you going to?: </label>
+    <input id="county" type="text" name="county">
+    <br>
+    <label for="stayLength">How many days is your trip?: </label>
+    <input id="stayLength" type="number" name="stayLength">
+    <br>
+    <label for="date">When are you leaving?: </label>
+    <input id="date" type="date" name="date">
+    <br>
+    <label for="description">Description: </label>
+    <input id="description" type="text" name="description">
+    <br>
     <input type="submit" value="Submit!" class="btn">
   </form>
-
-  <script>
-    const dateEl = document.getElementById('id_date');
-    M.Datepicker.init(dateEl, {
-      format: 'yyyy-mm-dd',
-      defaultDate: new Date(),
-      setDefaultDate: true,
-      autoClose: true
-    });
-  </script>
 {% endblock %}

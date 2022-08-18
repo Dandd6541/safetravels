@@ -3,14 +3,18 @@
 {% block content %}
 
 <h1>List of People</h1>
-
-{% for people in people_list %}
+{% if user %}
+    {% for people in people_list %}
+    {% if people.user == user %}
     <div class="card">
         <div class="card-content">
            <a href="{% url 'peoples_detail' people.id %}"><span class="card-title">{{ people.name }}</span></a>
             <p>Relation: {{ people.relation }}</p>
         </div>
     </div>
-
-{% endfor %}
+    {% endif %}
+    {% endfor %}
+{% else %}
+    <h3>No people added yet!</h3> 
+{% endif %}
 {% endblock %}
