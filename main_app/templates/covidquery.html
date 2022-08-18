@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1> COVID Query </h1>
+<h3> You are now viewing the most up to date COVID-19 data from   </h3>
+
+<table class="table table-striped table-light justify-content-center">
+    <thead>
+      <tr>
+        
+        <th class="text-center" scope="col">County</th>
+        <th class="text-center" scope="col">Last 7-Day Average COVID-19 Cases</th>
+        <th class="text-center" scope="col">Last 7-Day Average COVID-19 Deaths</th>
+    </tr>
+</thead>
+
+<tbody>
+ 
 {% for county in c %}
-<div>County: {{ county.county }}</div>
-<div>Last 7-Day Average Cases: {{ county.avg_cases }}</div>
-<div>Last 7-Day Average Deaths {{ county.avg_deaths }}</div>
+<tr>
+<td class="text-center">{{ county.county }}</div>
+<td class="text-center">{{ county.avg_cases }}</div>
+<td class="text-center">{{ county.avg_deaths }}</div>
+</tr>
+
 {% endfor %}
 {% endblock %}
+
+</tbody>
+</table>
