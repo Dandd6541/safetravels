@@ -6,13 +6,11 @@ Safe Travels is an application built to help users travel safely with COVID-19 s
 ## :camera_flash: Screenshots
 
 
-<img src=""   width="600px" height="400px"/>
-
-<img src=""   width="600px" height="400px"/>
-
-<img src=""   width="600px" height="400px"/>
-
-<img src=""   width="600px" height="400px"/>
+<img src="https://i.imgur.com/PNvWdre.png"   width="600px" height="400px"/>
+<img src="https://i.imgur.com/9Yn1iZI.png"   width="600px" height="400px"/>
+<img src="https://i.imgur.com/QBsPxtN.png"   width="600px" height="400px"/>
+<img src="https://i.imgur.com/tVPrcjS.png"   width="600px" height="400px"/>
+<img src="https://i.imgur.com/cXGXgWO.png"   width="600px" height="400px"/>
 
 ## :computer: Technologies Used
 -![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python) <br>
@@ -37,7 +35,7 @@ To begin, Sign-up with us, Log-In and let your journey begin. Once Logged in, cl
 * SafeTravels Trello Design Board
 * https://trello.com/b/O6Ac0Ztb/dev-app
 
-## :seedling: Next Steps
+## :seedling: Next Steps (Ice Box)
 
 1. Add API that will update the data daily, as apposed to weekly
 
