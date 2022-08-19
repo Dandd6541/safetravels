@@ -44,7 +44,7 @@ To begin, Sign-up with us, Log-In to let your journey begin. Once Logged in, cli
 5. Add a feature that allows users to see COVID-19 data specifically for the city they're going to WHILE adding trips
 
 
-## :Contact
+Contact
 
 Justin Mendoza:<br> 
 <a href="https://github.com/jmendoza13">Justin's GitHub</a><br>
@@ -56,7 +56,7 @@ Anthony Nguyen:<br>
 <a href="https://github.com/abpandanguyen">Anthony's GitHub</a><br>
 <a href="https://www.linkedin.com/in/abpnguyen/">Anthony's LinkedIn</a><br>
 
-## :Acknowledgements
+Acknowledgements <br>
 Thank you for the assistance and guidance <br>
 -Jim Clark <br>
 -Devlin Booth <br>
