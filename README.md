@@ -1,6 +1,6 @@
 # Safe Travels
 
-Safe Travels is an application built to help users travel safely with COVID-19 spreading quickly. This app allows a user to add a trip within depth descriptions on the travelers Trip. With that the traveler can also view the most up to date COVID-19 information any State and County of their desire. Lastly, as many people travel together, we gave the user the option to add a travel companion. 
+Safe Travels is an application built to help users travel safely with COVID-19 spreading quickly. This app allows a user to add a trip with in-depth descriptions on the traveler's 'Trip'. With that, the traveler can also view the most up to date COVID-19 information for any State and County of their desire. Lastly, as many people travel together, we gave the user the option to add 'travel buddies' for their trips.
 
 
 ## :camera_flash: Screenshots
@@ -27,7 +27,7 @@ Safe Travels is an application built to help users travel safely with COVID-19 s
 ## :diamond_shape_with_a_dot_inside: Getting Started
 
 
-To begin, Sign-up with us, Log-In and let your journey begin. Once Logged in, click on any of the links of desire to begin your "Safe Travel". The COVID-19 data, which is uploaded on this application, is being updated weekly, as we are trying to offer the most up to date COVID-19 related information. 
+To begin, Sign-up with us, Log-In to let your journey begin. Once Logged in, click on any of the links of desire to begin your "SafeTravel". The COVID-19 data, which is uploaded on this application, is being updated weekly, as we are trying to offer the most up to date COVID-19 related information. 
 
 * Check out Safe Travels!
 * https://safe-travels-p3.herokuapp.com/
@@ -37,17 +37,24 @@ To begin, Sign-up with us, Log-In and let your journey begin. Once Logged in, cl
 
 ## :seedling: Next Steps (Ice Box)
 
-1. Add API that will update the data daily, as apposed to weekly
+1. Adding an API that will update the data daily, opposed to weekly and also show user's geolocation to know where they're traveling to and from
+2. Making the forms on the website more clean and responsive
+3. Making it a more social app by adding in an 'Add Friends' feature and seeing their trips (and possibly combining them)
+4. Adding in more resources for COVID-19 data in general and for outside the US
+5. Add a feature that allows users to see COVID-19 data specifically for the city they're going to WHILE adding trips
 
 
 ## :Contact
 
-Justin Mendoza - https://github.com/jmendoza13 <br>
-
-Daniel-Kay Mordehai - https://github.com/Dandd6541 <br>
-
-Anthony Nguyen - https://github.com/abpandanguyen <br>
-
+Justin Mendoza:<br> 
+<a href="https://github.com/jmendoza13">Justin's GitHub</a><br>
+<a href="https://www.linkedin.com/in/j-mendoza">Justin's LinkedIn</a><br>
+Daniel-Kay Mordehai:<br> 
+<a href="https://github.com/Dandd6541">DK's GitHub</a><br>
+<a href="https://www.linkedin.com/in/danielkaymordehai/">DK's LinkedIn</a><br>
+Anthony Nguyen:<br>
+<a href="https://github.com/abpandanguyen">Anthony's GitHub</a><br>
+<a href="https://www.linkedin.com/in/abpnguyen/">Anthony's LinkedIn</a><br>
 
 ## :Acknowledgements
 Thank you for the assistance and guidance <br>
